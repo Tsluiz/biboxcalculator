@@ -1,0 +1,274 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>BiboxCalculator - Calculate your Bibox BIX bonus reward</title>
+  <meta name="description" content="Bibox Calculator is a tool to calculate your BIX bonus reward when you are holding BIX in your Bibox account. BIX is a cryptocurrency build by the Bibox.com exchange. When you hold this cryptocurrency in your account and you receive weekly bonus on your holdings.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <meta name="keywords" content="BIX,calculator,bonus,revenue,bibox币,bibox,bibox365,bibox交易所,bibox交易平台,ERC20,token,bix token,区块链资产交易平台,币币交易,数字货币交易网,虚拟货币账户,比特币交易系统,以太坊行情,莱特币走势,BTC价格,ETH钱包注册,LTC市价,P网,B网">
+  <meta name="google-site-verification" content="s3ZT7O1AC31aKaVF9aPqkOCO3U1pD5z0a6HdBQJlbc8" />
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700/Roboto:400,500,700" rel="stylesheet">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="assets/icons/favicon.png">
+  <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
+
+  <!-- Chat -->
+    <script id="chatBroEmbedCode">
+      /* Chatbro Widget Embed Code Start */
+      function ChatbroLoader(chats,async){async=!1!==async;var params={embedChatsParameters:chats instanceof Array?chats:[chats],lang:navigator.language||navigator.userLanguage,needLoadCode:'undefined'==typeof Chatbro,embedParamsVersion:localStorage.embedParamsVersion,chatbroScriptVersion:localStorage.chatbroScriptVersion},xhr=new XMLHttpRequest;xhr.withCredentials=!0,xhr.onload=function(){eval(xhr.responseText)},xhr.onerror=function(){console.error('Chatbro loading error')},xhr.open('GET','//www.chatbro.com/embed.js?'+btoa(unescape(encodeURIComponent(JSON.stringify(params)))),async),xhr.send()}
+    /* Chatbro Widget Embed Code End */
+    ChatbroLoader({encodedChatId: '528Ye', siteDomain: '#{biboxcalculator.com}', signature: '#{87fd5f28-32ae-4301-bb41-295844d12813}' });
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119965876-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-119965876-1');
+  </script>
+
+  <!-- bootstrap jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- ADsense activatie-->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4325268897706426\n" +
+    " \n",
+    enable_page_level_ads: true
+  });
+</script>
+
+</head>
+
+<body id="page-top">
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <!-- Add your site or application content here -->
+<div class="flex-container">
+
+  <header>
+    <div class="headerbar">
+      <img id="headerlogo" src="assets/img/bibox%20calculator%20bix%20logo.png" alt="Bibox bix bonus calculator">
+      <a href="https://www.bibox.com/login/register?id=" style="text-decoration:none;color:white;" target="_blank" rel="external nofollow"> <button id="buybixbutton">Buy Bix!</button></a>
+    </div>
+  </header>
+
+  <main class="flex-container">
+    <section>
+
+      <div class="calculatorcontainer">
+        <a href="https://www.bibox.com/login/register?id=11351161&lang=en" rel="external nofollow" target="_blank">
+        <img id="registerbiboxbanner" src="assets/img/registerbiboxbanner.jpeg" alt="buy bix cryptocurrency"><div class="pulse"></div></a>
+      <h1>Calculate your bibox reward</h1>
+      <h2> Enter your amount of BIX tokens to calculate your reward: </h2>
+
+
+        <!--Calculator box -->
+        <div id="calculatorbox">
+          <form id="calculatorform">
+            <input type="number" name="input" step="any" class="form-control" name="bixamount" type="number" min="1" required>
+            <button type="submit" onclick="" id="the-calculator-input" value="calculate" >Calculate</button>
+          </form>
+        </div>
+        <div class="loader"></div>
+        <!-- <div id="img" class="spinner" style="display:none;">
+          <img id="img2" src="assets/img/bibox-token-logo-png-transparent.gif" alt="Loading"/>
+        </div> -->
+
+
+        <script type="text/javascript">
+          $('#the-calculator-input').click(function(){
+            $('#bixreward_load').show(); //<----here
+            $.ajax({
+              success: function () {
+                $('#bixreward_load').hide(); //<--- hide again
+              }
+            </script>
+
+
+        <!-- Loading animation-->
+        <!-- Loading animation-->
+
+        <div id="bixreward_load" style="display:none">
+          <div id="calculatoroutput">
+            <div id="outputbiboxvalue">
+            <div id="outputcalculation">
+              <h3> Your current BIX holdings value:</h3>
+              <p id="bixworthresult"></p>
+            </div>
+              <h3>Your estimated reward for holding BIX*:</h3>
+
+              <table id="resultTable">
+                  <tr>
+                   <td style="border-right: 1px solid white">Daily:</td>
+                   <td id="bixDailyReward"></td>
+                  </tr>
+                 <tr>
+                  <td style="border-right: 1px solid white">Weekly</td>
+                   <td id="bixWeeklyReward"></td>
+                 </tr>
+                 <tr>
+                  <td style="border-right: 1px solid white">Monthly:</td>
+                  <td id="bixMonthlyReward"></td>
+                 </tr>
+                 <tr>
+                  <td style="border-right: 1px solid white">Annual:</td>
+                  <td id="bixYearlyReward"></td>
+                 </tr>
+                <tr>
+                  <td style="border-right: 1px solid white;font-weight:bold;">Annual ROI:</td>
+                  <td id="bixROI" style="font-weight:bold;"></td>
+                </tr>
+              </table>
+            </div>
+            <p id="footnoteText" style="text-align:center;">* Read our FAQ down below</p>
+          </div>
+          </div>
+      </div>
+
+    </section>
+
+    <section style="display:block;background-color:#ffffff;font-size:1rem;font-weight:400;color:#659aea;position:relative;margin:auto">
+
+      <div class="gerenalBix">
+        <h2>
+          What is the BIX cryptocurrency?
+        </h2>
+        <p>
+          BIX is a cryptocurrency build by the <a href="https://www.bibox.com/login/register?id=11351161&lang=en" rel="external nofollow">Bibox.com</a> exchange. When you hold this cryptocurrency in your Bibox account you receive dividend on your holdings. This website calculates an estimate on how much this is based on your holdings.
+        </p>
+
+        <div class="containerPrice" style="margin:auto;padding:30px 0;max-width:350px;"> <a href="https://www.bibox.com/login/register?id=">
+          <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js">
+          </script>
+          <div style="width:auto;height:auto;margin:auto;" class="coinmarketcap-currency-widget" data-currencyid="2307" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false">
+          </div>
+        </a>
+        </div>
+
+        <h2>
+          What is the BIX Incentive reward program?
+        </h2>
+        <p>
+          <a href="https://www.bibox.com/login/register?id=11351161&lang=en" rel="external nofollow">Bibox</a> will take out 30% of net profit to share with BIX holders. Bibox will take a snapshot of BIX balances in Bibox at 17:00 on every Friday. All the reward we will distribution to users’ account.
+        </p>
+      </div>
+
+      <div style="width:60%;min-width:370px;margin:auto;padding:30px 0;"><a href="https://www.bibox.com/login/register?id=" target="_blank">
+        <script type="text/javascript">
+          baseUrl = "https://widgets.cryptocompare.com/";
+          var scripts = document.getElementsByTagName("script");
+          var embedder = scripts[ scripts.length - 1 ];
+          var cccTheme = {"General":{"borderColor":"none"}};
+          (function (){
+            var appName = encodeURIComponent(window.location.hostname);
+            if(appName==""){appName="local";}
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            var theUrl = baseUrl+'serve/v1/coin/histo_week?fsym=BIX&tsym=USD';
+            s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+            embedder.parentNode.appendChild(s);
+          })();
+        </script>
+      </a>
+      </div>
+
+    </section>
+
+    <section>
+      <div id="faqlist">
+        <h2 style="text-decoration:underline;">Bibox Bix Rewards Calculator FAQ</h2>
+      <div id="rowquestions">
+        <div class="row-question">
+          <h3>
+              What do I have to do to receive the BIX bonus?
+            </h3>
+            <p>
+              You have to keep your BIX in your <a href="https://www.bibox.com/login/register?id=11351161&lang=en" target="_blank" rel="external nofollow">Bibox account</a> and trade at least once a week.
+          </p>
+          </div>
+        <div class="row-question">
+          <h3>
+            How does the bibox calculator work?
+          </h3>
+          <p>
+            We calculate the 24hour volume of the <a href="https://www.bibox.com/login/register?id=11351161&lang=en" rel="external nofollow" target="_blank" >Bibox</a> exchange and multiply it by the trading fees. We use your input to make a calculation based on the information Bibox provides.
+          </p>
+        </div>
+        <div class="row-question">
+          <h3>
+            How accurate is the Bibox calculator?
+          </h3>
+          <p>
+            We try to be as accurate as we can be. <a href="https://www.bibox.com/login/register?id=11351161&lang=en" rel="external nofollow" target="_blank">Bibox</a> does not offer numbers on how much trades use BIX tokes for discount on the trading fees. This is not taken into the calculations. Also Bibox does not give any information about their total revenue.
+          </p>
+        </div>
+        <div class="row-question">
+          <h3>
+            How do you calculate this reward?
+          </h3>
+          <p>
+            This example is provided by Bibox:
+            “The net profit of this week is 100BTC in Bibox.com, if you hold 130000BIX, you will receive (130000/130000000) 30% 100BTC = 0.02BTC per week. If the trading amount and operating costs of the platform stay the same, you will get 1.04 BTC a year. “
+            You can find more information <a href="https://bibox.zendesk.com/hc/en-us/articles/360002055853" target="_blank" rel="external nofollow">here</a>
+          </p>
+        </div>
+        <div class="row-question">
+          <h3>
+            How can I contact you?
+          </h3>
+          <p>
+            Direct message your feedback, questions or advices to us via <a href="mailto:jamielogan@protonmail.com" target="_blank">Mail</a> We are looking forward to hear from you!
+          </p>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Ad Start -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Bibiox -->
+  <ins class="adsbygoogle"
+       style="display:block;margin:auto;padding:1px;left:33%;max-width:728px;height:90px"
+       data-ad-client="ca-pub-4325268897706426"
+       data-ad-slot="5705398300"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <!-- Ad End -->
+
+
+  <!--footer end-->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</div>
+  <footer>
+
+    <div ><p style="text-align:center;width:100%;">Copyright @ BiboxCalculator 2018</p></div>
+
+  </footer>
+
+  <div class="modal"><!-- Place at bottom of page --></div>
+
+
+</body>
+
+</html>

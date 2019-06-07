@@ -1,0 +1,801 @@
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #f8f8fb;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+body{
+  padding: 0px;
+  margin: auto;
+  background-color: #f8f8fb;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  color: #fff;
+}
+
+/* Links */
+a:link {
+  color:#659aea;
+}
+
+a:visited {
+  color: #507fc5;
+}
+
+a:hover {
+  color: #ff9d5c;
+}
+
+a:active {
+  color: #659aea;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+header{
+  color: #061e2e;
+  background-color: #f8f8fb;
+  position:sticky;
+  padding:20px;
+  height:min-content;
+  top: 0;
+  z-index:10000;
+  border-bottom: 2px solid #659aea;
+}
+
+.headerbar{
+  padding: 2px 20px;
+  height: 50px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#headerlogo{
+  padding-top:0.25rem;
+  padding-bottom:0.25rem;
+  margin-right:1rem;
+  line-height:inherit;
+  width: auto;
+  height: auto;
+}
+
+#buybixbutton{
+  box-shadow: 1px 1px 1px 0 #659aea;
+  color: white;
+  height: 40px;
+  width: 120px;
+  cursor:pointer;
+  float: right;
+  border-radius: 5px;
+  background-color: #659aea;
+  font-weight: 200;
+  font-size: 18px;
+  border: 1px solid #659aea;
+}
+
+#buybixbutton:hover{
+  background-color: #ff9d5c;
+  border: 1px solid #ff9d5c;
+  color: #f8f8fb;
+  outline-style: none;
+}
+
+#buybixbutton:active{
+  background-color: #659aea;
+  border: 1px solid #ff9d5c;
+  color: #f8f8fb;
+}
+
+@media only screen and (max-width: 770px) {
+
+  header{
+    padding: 10px 10px;
+  }
+
+  .headerbar{
+    margin: 0;
+  }
+
+  #headerlogo{
+    display: block;
+    position: relative;
+    margin: auto;
+  }
+
+  #buybixbutton{
+    display: none;
+  }
+
+  .pulse{
+    margin: 0;
+    top: 50px;
+    width: 20px;
+    height: 20px;
+    display: none;
+    position: absolute;
+    right: 50px;
+  }
+}
+
+main, .flex-container{
+  font-weight: 200;
+  height:min-content;
+  width:100%;
+  position:relative;
+  display:block;
+}
+
+section{
+  padding:10px;
+  margin:auto;
+  position:relative;
+  display:block;
+  background-color:#061e2e;
+  color:#fff;
+  height:min-content;
+  border-bottom: 2px solid #659aea;
+}
+
+.calculatorcontainer{
+  margin:auto;
+  max-width:800px;
+  height:auto;
+  padding:15px;
+  position:relative;
+  display:block;
+  font-weight:400;
+  font-size:1rem;
+  line-height:1.5rem;
+}
+
+#registerbiboxbanner{
+  width: 100%;
+  height: 50%;
+  max-width: 700px;
+  max-height: 100px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  padding: 1px;
+}
+
+#registerbiboxbanner:hover{
+  border: 1px solid white;
+}
+
+.calculatorcontainer h1{
+  text-transform:uppercase;
+  width:100%;
+  text-align:center;
+  font-size: 28px;
+  word-spacing: 5px;
+  line-height: 3rem
+}
+
+.calculatorcontainer h2{
+  text-transform:uppercase;
+  width:80%;
+  text-align:center;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+  line-height: 2rem;
+  font-weight: normal;
+}
+
+#calculatorbox{
+  width:100%;
+  margin:auto;
+  display:block;
+}
+
+#calculatorform{
+  padding: 30px;
+}
+
+#calculatorform, input{
+  color:black;
+  width:220px;
+  margin:auto;
+  display:block;
+  border-radius:5px;
+  text-align:center;
+  line-height:2rem;
+  font-size: 15px;
+}
+
+#the-calculator-input{
+  font-weight:500;
+  font-size:18px;
+  color:white;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:20px;
+  cursor:pointer;
+  display:block;
+  background-color:#ff9d5c;
+  width:130px;
+  height:30px;
+  border:none;
+  border-radius:5px;
+  outline-style: none;
+}
+
+#the-calculator-input:active{
+  outline-color: #659aea;
+  background-color: #659aea;
+}
+
+#calculatoroutput{
+  height:min-content;
+  display:block;
+  position:relative;
+  margin:20px;
+  color:#ffffff;
+  text-align: center;
+  align-content: center;
+  border: 1px solid white;
+}
+
+#outputbiboxvalue{
+  margin:auto;
+  text-align:center;
+}
+
+#outputbiboxvalue, h3{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#outputbiboxvalue, h4{
+  font-size: 20px;
+  font-weight: normal;
+}
+
+#outputcalculation{
+  margin:auto;
+  display:block;
+  position:relative;
+  text-align:center;
+  border: 1px solid white;
+}
+
+#resultTable{
+  width: 300px;
+  margin:auto;
+  background-color: #f3f3f3;
+  border: 1px solid #061e2e;
+  height: min-content;
+}
+
+#resultTable, td{
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.5rem;
+  padding-left: 10px;
+  color:#659aea;
+}
+
+#resultTable, td{
+  width: 250px;
+  height: 40px;
+}
+tr:nth-child(even){background-color: #f1f1f1; color:#659aea}
+
+tr:hover {background-color: #f9f9f9;}
+
+.gerenalBix{
+  padding:20px;
+  width:80%;
+  margin:auto;
+  text-align:center;
+  max-width:900px;
+}
+
+footer{
+  background-color:#f8f8fb;
+  height:min-content;
+  bottom: -20px;
+  width:100%;
+  padding: 5px 5px 30px 5px;
+  position:relative;
+  display:block;
+  color:#061e2e;
+}
+
+#faqlist{
+  width:80%;
+  min-width:300px;
+  padding-top:30px;
+  margin:auto;
+  display:block;
+  height:min-content;
+  text-align:center;
+}
+
+.rowquestions{
+  display:block;
+  position:relative;
+  padding:10px;
+  min-width:360px;
+  max-width:800px;
+  height:min-content;
+  border:1px solid #f8f8fb;
+}
+
+.row-question{
+  padding:10px;
+  line-height: 1.5em;
+}
+
+.adbanner { height: 90px; }
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#bixreward_load {
+  opacity: 1;
+  margin-top: 20px;
+}
+
+#bixreward_load .alert {
+  max-width: 300px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+#footnoteText{
+  font-size: 10px;
+
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+
+}
+
+@media print,
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+  Load Spinner - from ku coin
+   ========================================================================== */
+#show_loader{
+  margin:0 auto;
+  display:none;
+}
+.loading_spinner {
+  margin: 50px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.loading_spinner > div {
+  background-color: #43acf0;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.loading_spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.loading_spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.loading_spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.loading_spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+       transform: scaleY(1.0);
+       -webkit-transform: scaleY(1.0);
+     }
+}
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+}
+/* loader coce */
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px; /* half width of the spinner gif */
+  margin-top: -50px; /* half height of the spinner gif */
+  text-align:center;
+  z-index:1234;
+  overflow: auto;
+  width: 100px; /* width of the spinner gif */
+  height: 102px; /*hight of the spinner gif +2px to fix IE8 issue */
+}
+
+.loader {
+  display: none;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+/* Pulse */
+.pulse {
+  -webkit-animation: cuePulse 2.2s infinite 1s ease;
+  animation: cuePulse 2.2s infinite 1s ease;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+  height: 20px;
+  position: absolute;
+  width: 20px;
+  border: 2px solid #52b1db;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 200;
+  right: 50px;
+  top: 50px;
+  display: block;
+
+}
+
+@-webkit-keyframes cuePulse {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0)
+  }
+
+  50% {
+    box-shadow: 0px 0px 3px #fff;
+    opacity: 1
+  }
+
+  98% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0);
+    opacity: 0
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0
+  }
+}
+
+@keyframes cuePulse {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0)
+  }
+
+  50% {
+    box-shadow: 0px 0px 3px #fff;
+    opacity: 1
+  }
+
+  98% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0);
+    opacity: 0
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0
+  }
+}
